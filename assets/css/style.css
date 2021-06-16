@@ -1,0 +1,437 @@
+/* Подключение шрифтов */
+@font-face {
+    font-family: 'Montserrat-L';
+    src: url('../fonts/Montserrat-Light.ttf');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Montserrat-M';
+    src: url('../fonts/Montserrat-Medium.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Yeseva';
+    src: url('../fonts/YesevaOne-Regular.ttf');
+}
+
+/* Основные стили */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.burger { padding: 6px; }
+
+.burger .line {
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    display: block;
+    margin-bottom: 4px;
+}
+
+a { text-decoration: none; }
+body { background: #f1f1f1; }
+.bg-white { background: #fff; }
+.btn-main:hover { opacity: .8; }
+.row { display: flex; }
+.col-md-6 { width: 50%; }
+
+.main-section { 
+    margin-top: -30px; 
+    padding: 70px;
+    box-sizing: border-box;
+    min-height: 400px;
+}
+
+.main-section h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    color: #E0C66E;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.btn{
+    border: 1px solid #fff;
+    padding: 13px 27px;
+    display: block;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    transition: background .5s ease;
+}
+
+.btn:not(.burger):hover {
+    background: #fff;
+    color: #333;
+}
+
+.btn-main {
+    font-family: "Montserrat", sans-serif;
+    background: #000;
+    color: #fff;
+    display: inline-block;
+    padding: 13px 50px;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background .5s ease;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    border: none;
+}
+
+section h3.title { 
+    font-family: "Montserrat-L";
+    font-weight: 300;
+    color: #E0C66E; 
+    text-align: center;
+    font-size: 40px;
+}
+
+/* Шапка */
+
+header {
+    background: url('../img/header-bg.png');
+    padding-bottom: 3%;
+}
+
+nav {
+    background: #000;
+    padding: 22px 0;
+    font-family: 'Montserrat-L', sans-serif;
+    font-weight: 300;
+    z-index: 999;
+}
+
+nav ul li {
+    margin-left: 20px;
+    border-bottom: 2px solid #333;
+    transition: all .5s ease;
+}
+
+nav ul li:hover, 
+nav ul li.active {
+    border-bottom: 2px solid #fff;
+}
+
+nav ul li a {
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 0;
+}
+
+nav.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-info .container {
+    font-family: "Yeseva";
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 114px;
+}
+
+.text-info .container h1 {
+    font-size: 150px;
+    letter-spacing: 0.085em;
+    font-weight: 300;
+}
+
+.text-info .container .under-header {
+    display: flex;
+    align-items: center;
+    margin-top: 22px;
+}
+
+.text-info .container .under-header h3 {
+    font-size: 26px;
+    letter-spacing: 0.05em;
+    margin: 0 12px 0 19px;
+}
+
+nav p { color: #fff; }
+.text-info .container .under-header svg { 
+    margin-left: 7px;
+    width: 30px;
+    height: 28px;
+}
+
+/* Главная страница */
+
+.wrapper {
+    border: 1px solid #E0C66E;
+    padding: 40px;
+    font-family: "Montserrat";
+    position: relative;
+}
+
+.wrapper h3 { 
+    font-size: 32px; 
+    letter-spacing: 0.05em;
+    font-family: "Yeseva";
+}
+
+.wrapper p { 
+    font-size: 16px; 
+    width: 70%;
+    margin-top: 40px;
+    line-height: 32px;
+    letter-spacing: 0.05em; 
+    color: #333;
+}
+
+.wrapper .aside-img {
+    position: absolute;
+    right: -10%; top: -30%;
+}
+
+.wrapper .btn-main { margin-top: 30px; }
+.wrapper.about p { width: 100%; }
+
+/* Номера */
+
+.rooms { margin-top: 100px; }
+
+.rooms .card-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    margin-top: 60px;
+}
+
+.rooms .card-list .card-item {
+    background: url('../img/room.png') no-repeat center center / cover;
+    min-width: 340px;
+    min-height: 340px;
+    max-width: 340px;
+    max-height: 340px;
+}
+
+.overlay {
+    position: relative;
+    left: 0;
+    min-width: inherit;
+    min-height: inherit;
+    background: rgba(0,0,0, .7);
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay .booking { display: none; }
+.overlay:hover .wrap { display: none; }
+
+.overlay:hover .booking { 
+    display: block; 
+    cursor: pointer;
+}
+
+
+.overlay .wrap {
+    border: 1px solid #E0C66E;
+    padding: 40px 30px;
+    min-height: 200px;
+    max-height: 200px;
+    color: #E0C66E;
+    font-family: 'Montserat-L';
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.overlay .wrap p.title { font-size: 32px; }
+.overlay .wrap .price p {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.overlay .wrap .price p img { margin-right: 8px; }
+
+/* Контакты */
+
+.contacts { margin-top: 100px; }
+.contacts .row { margin-top: 60px; }
+
+.contacts .contacts-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    font-family: "Montserrat-L";
+    font-weight: 300;
+}
+
+.contacts .col-md-6:first-child {
+    margin: 70px 0 20px 0;
+}
+
+.contacts .contacts-line img {
+    margin-right: 26px;
+}
+
+/* Гостевая книга */
+
+.reviews-list {
+    margin-top: 60px;
+}
+
+.reviews-item {
+    margin-top: 20px;;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #E0C66E;
+}
+
+.reviews-item .title {
+    font-size: 20px;
+    font-family: 'Montserrat-M';
+    font-weight: 500
+}
+
+.reviews-item .title  { 
+    font-family: "Montserrat-L"; 
+    font-weight: 300;
+    font-size: 16px;
+    background: #E0C66E;
+    color: #fff;
+    padding: 8px 8px;
+    border-radius: 4px;
+}
+
+.reviews-item p.text {
+    background: #f1f1f1;
+    padding: 8px 16px;
+    margin-top: 8px;
+}
+
+/* Подвал */
+
+footer { margin-top: 50px; }
+
+/* Форма осталвения отзыва */
+
+.main-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-form label {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-form label span {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 10px;
+}
+
+.main-form label input,
+.main-form label select {
+    padding: 16px 24px;
+    border: 1px solid #c4c4c4;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+
+.main-form label input:focus,
+.main-form label input:active,
+.main-form label textarea:focus,
+.main-form label textarea:active { outline: none; }
+
+.main-form textarea { 
+    resize: none;
+    padding: 16px 24px;
+    border: 1px solid #c4c4c4;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.main-form { font-family: "Montserrat"; }
+.error { border: 1px solid red !important; }
+
+.roomsrow label { width: 100%; }
+.roomsrow { gap: 20px; }
+
+
+/* Таблицы */
+
+table { 
+    border-collapse: collapse; 
+    font-family: "Montserrat", sans-serif; 
+    width: 100%;
+    margin: 50px 0;
+}
+
+table.admin-rooms { border-bottom: 5px solid #007fff!important; }
+table.admin-rooms th,
+table.admin-rooms td { text-align: left; }
+
+thead, tbody, tfoot { 
+    display: inline-table;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+tr, td, th {
+    border: 1px solid #c4c4c4;
+    padding: 16px 24px;
+}
+
+.delete-btn {
+    background: rgb(228, 51, 51);
+    padding: 16px 24px;
+    border-radius: 4px;
+    color: #fff;
+    display: block;
+}
+
+.wrapper-admin { margin-bottom: 20px; }
+
+.success-message {
+    padding: 20px 10px;
+    width: 100%;
+    color: #0f5132;
+    background: #d1e7dd;
+    font-size: 18px;
+    font-family: "Montserrat";
+    text-align: center;
+}
